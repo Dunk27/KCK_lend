@@ -641,6 +641,51 @@ nav {
 .bsc-val { font-family:'Unbounded',sans-serif; font-size:22px; font-weight:700; }
 .bsc-sub { font-size:11px; opacity:.7; margin-top:3px; }
 
+/* ======= VIDEO REVIEWS ======= */
+.video-reviews-col {
+  display:flex; flex-direction:column; gap:16px;
+}
+.vr-label {
+  font-size:12px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;
+  color:var(--blue-bright); margin-bottom:4px;
+}
+.video-reviews-list { display:flex; flex-direction:column; gap:14px; }
+.vr-card {
+  display:flex; gap:14px; align-items:center;
+  background:#fff; border:1px solid var(--border); border-radius:16px;
+  padding:14px; transition:all .25s;
+  box-shadow:0 2px 12px rgba(10,45,110,.05);
+}
+.vr-card:hover { transform:translateX(4px); box-shadow:0 8px 28px rgba(10,45,110,.1); border-color:rgba(33,118,255,.25); }
+.vr-thumb {
+  width:64px; height:96px; border-radius:12px; flex-shrink:0;
+  background:linear-gradient(160deg,#1251c5,#2176ff);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  position:relative; cursor:pointer; overflow:hidden;
+}
+.vr-thumb::after {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(160deg,rgba(255,255,255,.07),transparent);
+}
+.vr-thumb-2 { background:linear-gradient(160deg,#0a6e5a,#00c6a0); }
+.vr-thumb-3 { background:linear-gradient(160deg,#7a3ab5,#b06fef); }
+.vr-play {
+  width:30px; height:30px; border-radius:50%;
+  background:rgba(255,255,255,.9);
+  display:flex; align-items:center; justify-content:center;
+  font-size:11px; color:var(--blue-mid); padding-left:2px;
+  box-shadow:0 4px 12px rgba(0,0,0,.2); position:relative; z-index:1;
+}
+.vr-duration {
+  position:absolute; bottom:6px; right:7px;
+  font-size:9px; font-weight:700; color:rgba(255,255,255,.9);
+  background:rgba(0,0,0,.35); border-radius:4px; padding:1px 5px;
+}
+.vr-info { flex:1; min-width:0; }
+.vr-name { font-size:13px; font-weight:700; color:var(--blue-dark); margin-bottom:2px; }
+.vr-niche { font-size:11px; color:var(--text-light); margin-bottom:6px; }
+.vr-quote { font-size:12px; color:var(--text-mid); line-height:1.55; font-style:italic; }
+
 /* ======= WHOM ======= */
 .whom-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-bottom:24px; }
 .whom-card {
@@ -707,7 +752,7 @@ nav {
 .calc-v { font-weight:700; color:var(--blue-bright); font-size:14px; }
 .calc-v.amber { color:var(--amber); }
 .calc-cta-btn {
-  width:100%; margin-top:18px; padding:13px;
+  width:100%; margin-top:32px; padding:13px;
   border:2px solid var(--blue-mid); border-radius:10px;
   background:transparent; color:var(--blue-mid);
   font-family:'Mulish',sans-serif; font-size:13px; font-weight:700;
@@ -1485,16 +1530,46 @@ function toggleTrack(id) {
         </div>
       </div>
     </div>
-    <div>
-      <div class="big-stat-card">
-        <div class="bsc-big"><span>%</span></div>
-        <div class="bsc-lbl">средний рост конверсии лидов</div>
-        <div class="bsc-grid">
-          <div class="bsc-item"><div class="bsc-val">-60%</div><div class="bsc-sub">стоимость привлечения</div></div>
-          <div class="bsc-item"><div class="bsc-val">×3.2</div><div class="bsc-sub">скорость закрытия сделок</div></div>
-          <div class="bsc-item"><div class="bsc-val">90%</div><div class="bsc-sub">качество заявок</div></div>
-          <div class="bsc-item"><div class="bsc-val">~2 мес</div><div class="bsc-sub">средний срок выполнения</div></div>
+    <div class="video-reviews-col">
+      <div class="vr-label">💬 Видеоотзывы клиентов</div>
+      <div class="video-reviews-list">
+
+        <div class="vr-card">
+          <div class="vr-thumb">
+            <div class="vr-play">▶</div>
+            <div class="vr-duration">0:47</div>
+          </div>
+          <div class="vr-info">
+            <div class="vr-name">Алексей К.</div>
+            <div class="vr-niche">Кухни на заказ · Москва</div>
+            <div class="vr-quote">«13 сделок из 30 заявок — менеджеры наконец занимаются продажами»</div>
+          </div>
         </div>
+
+        <div class="vr-card">
+          <div class="vr-thumb vr-thumb-2">
+            <div class="vr-play">▶</div>
+            <div class="vr-duration">1:12</div>
+          </div>
+          <div class="vr-info">
+            <div class="vr-name">Сергей М.</div>
+            <div class="vr-niche">Установка ворот · СПб</div>
+            <div class="vr-quote">«Окупили вложения за первый месяц, 12 закрытых сделок»</div>
+          </div>
+        </div>
+
+        <div class="vr-card">
+          <div class="vr-thumb vr-thumb-3">
+            <div class="vr-play">▶</div>
+            <div class="vr-duration">0:58</div>
+          </div>
+          <div class="vr-info">
+            <div class="vr-name">Дмитрий В.</div>
+            <div class="vr-niche">Строительство · Краснодар</div>
+            <div class="vr-quote">«Качество заявок — небо и земля по сравнению с рекламой»</div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -1588,7 +1663,8 @@ function toggleTrack(id) {
         <div style="height:1px;background:var(--border);margin:8px 0;"></div>
         <div class="calc-row"><span class="calc-k">Чек до 200 000₽</span><span class="calc-v">от 5 000₽</span></div>
         <div class="calc-row"><span class="calc-k">Чек от 200 000₽</span><span class="calc-v amber">индивидуально</span></div>
-        <a href="https://t.me/tprofitK" target="_blank" class="calc-cta-btn" style="text-decoration:none;">Связаться с нами для расчёта</a>
+        <div style="height:1px;background:var(--border);margin:16px 0;"></div>
+        <a href="https://t.me/tprofitK" target="_blank" class="calc-cta-btn" style="text-decoration:none;margin-top:0;">Связаться с нами для расчёта</a>
       </div>
     </div>
   </div>
