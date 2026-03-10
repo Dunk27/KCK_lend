@@ -81,6 +81,7 @@ nav {
   display:flex; align-items:center;
   background:linear-gradient(150deg,#eef4ff 0%,#f8fbff 55%,#e6f0fd 100%);
   position:relative; overflow:hidden;
+  box-sizing:border-box; width:100%;
 }
 .hero::before {
   content:''; position:absolute; top:-200px; right:-200px;
@@ -120,9 +121,8 @@ nav {
 }
 .hero-ksk {
   font-family:'Unbounded',sans-serif;
-  font-size:clamp(36px,5.5vw,72px); font-weight:800; line-height:1.05;
+  font-size:clamp(28px,4.5vw,64px); font-weight:800; line-height:1.1;
   color:var(--blue-dark); letter-spacing:-1px; margin-bottom:10px;
-  white-space:nowrap;
 }
 .hero-ksk-sub {
   font-family:'Unbounded',sans-serif;
@@ -733,7 +733,7 @@ footer {
   .nav-links { display:none; }
   .hero { padding:100px 24px 60px; }
   .hero-inner,.two-col,.ben-inner { grid-template-columns:1fr; }
-  .hero-ksk { white-space:normal; font-size:clamp(28px,7vw,52px); }
+  .hero-ksk { font-size:clamp(24px,6vw,40px); }
   .hero-card,.float-card { display:none; }
   .section,.how-strip,.ben-strip,.cta-sec { padding:64px 24px; }
   .stats-inner { grid-template-columns:1fr 1fr; }
@@ -1509,7 +1509,7 @@ function toggleTrack(id) {
   </div>
   <a href="https://t.me/tprofitK" target="_blank" class="tg-btn" title="Написать в Telegram">
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-
+      <path d="M12 2C6.477226.477212s4.477 10 10 10 10-4.4771010S17.5232122zm4.93 6.686l-1.686 7.937c-.125.556-.453.692-.918.43l-2.54-1.873-1.226 1.18c-.135.135-.25.25-.512.25l.183-2.587 4.714-4.258c.205-.183-.045-.284-.317-.101L8.23 14.617l-2.5-.781c-.543-.17-.554-.543.113-.803l9.73-3.75c.453-.163.85.112.357.403z" fill="white"/>
     </svg>
   </a>
 </div>
