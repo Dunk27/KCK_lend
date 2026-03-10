@@ -96,7 +96,7 @@ nav {
 }
 .hero-inner {
   max-width:1200px; margin:0 auto; width:100%;
-  display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;
+  display:grid; grid-template-columns:1fr; gap:64px; align-items:center;
   position:relative; z-index:1;
 }
 .hero-content { animation:fadeUp .8s ease both; }
@@ -120,17 +120,18 @@ nav {
 }
 .hero-ksk {
   font-family:'Unbounded',sans-serif;
-  font-size:clamp(60px,9vw,110px); font-weight:800; line-height:.95;
-  color:var(--blue-dark); letter-spacing:-2px; margin-bottom:10px;
+  font-size:clamp(36px,5.5vw,72px); font-weight:800; line-height:1.05;
+  color:var(--blue-dark); letter-spacing:-1px; margin-bottom:10px;
+  white-space:nowrap;
 }
 .hero-ksk-sub {
   font-family:'Unbounded',sans-serif;
-  font-size:clamp(14px,2vw,20px); font-weight:600; color:var(--blue-bright);
+  font-size:clamp(13px,1.6vw,18px); font-weight:600; color:var(--blue-bright);
   letter-spacing:.5px; margin-bottom:22px;
 }
 .hero-desc {
   font-size:15px; line-height:1.75; color:var(--text-mid);
-  max-width:460px; margin-bottom:32px;
+  max-width:700px; margin-bottom:32px;
 }
 .hero-desc strong { color:var(--blue-dark); }
 .hero-pills { display:flex; gap:14px; margin-bottom:36px; flex-wrap:wrap; }
@@ -732,6 +733,7 @@ footer {
   .nav-links { display:none; }
   .hero { padding:100px 24px 60px; }
   .hero-inner,.two-col,.ben-inner { grid-template-columns:1fr; }
+  .hero-ksk { white-space:normal; font-size:clamp(28px,7vw,52px); }
   .hero-card,.float-card { display:none; }
   .section,.how-strip,.ben-strip,.cta-sec { padding:64px 24px; }
   .stats-inner { grid-template-columns:1fr 1fr; }
@@ -866,7 +868,6 @@ footer {
     <li><a href="#problem">Проблема</a></li>
     <li><a href="#solution">Решение</a></li>
     <li><a href="#criteria">Критерии</a></li>
-    <li><a href="#finance">Финансы</a></li>
     <li><a href="#whom">Для кого</a></li>
     <li><a href="#guarantees">Гарантии</a></li>
   </ul>
@@ -880,25 +881,25 @@ footer {
   <div class="hero-inner">
     <div class="hero-content">
       <!-- A — Attention -->
-      <div class="hero-attention-tag">🔥 Только квалифицированные клиенты — без лишнего "мусора"</div>
-      <div class="hero-ksk">30 горячих<br>заявок</div>
+      <div class="hero-attention-tag">🔥 Только квалифицированные клиенты — без лишнего шума</div>
+      <div class="hero-ksk">Получи от 6 000 000 продаж</div>
       <div class="hero-ksk-sub">за 150 000 ₽ · с гарантией качества</div>
 
       <!-- I — Interest -->
       <p class="hero-desc">
-        Ваши менеджеры тратят время на клиентов, которые <strong>не купят никогда</strong>. Мы берём на себя отбор — и передаём только тех, кто готов платить <strong>СТОЛЬКО СКОЛЬКО ВАМ НУЖНО</strong>, а так же готовы принять решение сейчас и работать по вашим условиям.
+        Ваши менеджеры тратят время на клиентов, которые <strong>не купят никогда</strong>. Мы берём на себя отбор — и передаём только тех, кто готов платить <strong>от 50 000 до 200 000₽</strong>, принять решение сейчас и работать по вашим условиям.
       </p>
 
       <!-- D — Desire -->
       <div class="hero-proof-row">
         <div class="hero-proof-item">
           <span class="hero-proof-num">3900%</span>
-          <span class="hero-proof-lbl">ROI(возврат инвестиций) при конверсии 25%</span>
+          <span class="hero-proof-lbl">ROI при конверсии 25%</span>
         </div>
         <div class="hero-proof-div"></div>
         <div class="hero-proof-item">
           <span class="hero-proof-num">6 млн ₽</span>
-          <span class="hero-proof-lbl">потенциал продаж с 30 заявок</span>
+          <span class="hero-proof-lbl">потенциал с 30 заявок</span>
         </div>
         <div class="hero-proof-div"></div>
         <div class="hero-proof-item">
@@ -914,69 +915,9 @@ footer {
       </div>
       <p class="hero-guarantee">✓ Договор · ✓ Записи звонков · ✓ Интеграция с CRM</p>
     </div>
-
-    <!-- Hero card -->
-    <div style="position:relative;">
-      <div class="hero-card">
-        <div class="hc-label">Финансовый результат</div>
-        <div class="hc-roi-center">
-          <div class="hc-roi-num">3900%</div>
-          <div class="hc-roi-sub">ROI при конверсии всего 25%</div>
-        </div>
-        <div class="hc-flow">
-          <div class="hc-row">
-            <div class="hc-box">
-              <div class="lbl">Ваши инвестиции</div>
-              <div class="val">150 000₽</div>
-            </div>
-            <div class="hc-arrow">→</div>
-            <div class="hc-box accent">
-              <div class="lbl">Потенциал продаж</div>
-              <div class="val">6 000 000₽</div>
-            </div>
-          </div>
-          <div class="hc-triplet">
-            <div class="hc-mini">
-              <div class="lbl">Цена заявки</div>
-              <div class="val">5 000₽</div>
-            </div>
-            <div class="hc-mini">
-              <div class="lbl">Кол-во</div>
-              <div class="val">30 шт.</div>
-            </div>
-            <div class="hc-mini">
-              <div class="lbl">Средний чек</div>
-              <div class="val">200 000₽</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
   </div>
 </section>
 
-<!-- STATS STRIP -->
-<div class="stats-strip">
-  <div class="stats-inner">
-    <div class="stat-item">
-      <div class="stat-num">30</div>
-      <div class="stat-desc">квалифицированных заявок</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">5 000₽</div>
-      <div class="stat-desc">стоимость одной заявки</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">3900%</div>
-      <div class="stat-desc">ROI при конверсии 25%</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">5 фильтров</div>
-      <div class="stat-desc">глубокой квалификации</div>
-    </div>
-  </div>
-</div>
 
 <!-- PROBLEM -->
 <section class="section alt" id="problem">
@@ -1031,7 +972,7 @@ footer {
       <div class="card">
         <div class="card-icon">🎯</div>
         <div class="card-title">Строгая квалификация</div>
-        <p class="card-text">Каждая заявка проходит отбор по 5 фильтрам: бюджет, сроки, коммуникация, формат оплаты и география. До вас доходят только лучшие.</p>
+        <p class="card-text">Каждая заявка проходит отбор по 5 критериям: бюджет, сроки, коммуникация, формат оплаты и география. До вас доходят только лучшие.</p>
       </div>
       <div class="card">
         <div class="card-icon">📞</div>
@@ -1040,8 +981,8 @@ footer {
       </div>
       <div class="card">
         <div class="card-icon">🚫</div>
-        <div class="card-title">Старт с полного "0"</div>
-        <p class="card-text">Не нужен сайт, соцсети, реклама, колл-центр или presale менеджеры. Достаточно лишь понимать, какой клиент вам нужен — мы его найдём.</p>
+        <div class="card-title">Никакого маркетинга</div>
+        <p class="card-text">Не нужен сайт, соцсети, реклама, колл-центр или presale. Достаточно лишь понимать, какой клиент вам нужен — мы его найдём.</p>
       </div>
       <div class="card">
         <div class="card-icon">🔄</div>
@@ -1072,15 +1013,15 @@ footer {
     <div class="cases-grid">
 
       <div class="case-card">
-        <div class="case-tag">B2C услуги</div>
-        <div class="case-title">Компания по установке ворот — СпБ</div>
+        <div class="case-tag">Строительство</div>
+        <div class="case-title">Компания по ремонту и отделке — Москва</div>
         <div class="case-metrics">
           <div class="case-metric">
             <span class="case-metric-num">30</span>
-            <span class="case-metric-lbl">заявок за 90 дней</span>
+            <span class="case-metric-lbl">заявок за 30 дней</span>
           </div>
           <div class="case-metric">
-            <span class="case-metric-num green">12</span>
+            <span class="case-metric-num green">8</span>
             <span class="case-metric-lbl">закрытых сделок</span>
           </div>
           <div class="case-metric">
@@ -1088,23 +1029,23 @@ footer {
             <span class="case-metric-lbl">вложения</span>
           </div>
           <div class="case-metric">
-            <span class="case-metric-num green">2.8М₽</span>
+            <span class="case-metric-num green">1.6М₽</span>
             <span class="case-metric-lbl">выручка с заявок</span>
           </div>
         </div>
-        <div class="case-quote">Получили интересный опыт, когда клиент отквалифицирован прогрет перед передачей нашим менеджерам. Менеджеры наконец занимаются продажами, а не фильтрацией.</div>
+        <div class="case-quote">Получили готовых клиентов — ни одной пустой встречи. Менеджеры наконец занимаются продажами, а не фильтрацией.</div>
       </div>
 
       <div class="case-card">
-        <div class="case-tag">B2C услуги</div>
-        <div class="case-title">Кухни по индивидуальному заказу</div>
+        <div class="case-tag">Юридические услуги</div>
+        <div class="case-title">Юридическая фирма — корпоративное право</div>
         <div class="case-metrics">
           <div class="case-metric">
             <span class="case-metric-num">30</span>
             <span class="case-metric-lbl">заявок за месяц</span>
           </div>
           <div class="case-metric">
-            <span class="case-metric-num green">13</span>
+            <span class="case-metric-num green">11</span>
             <span class="case-metric-lbl">новых клиентов</span>
           </div>
           <div class="case-metric">
@@ -1112,23 +1053,23 @@ footer {
             <span class="case-metric-lbl">вложения</span>
           </div>
           <div class="case-metric">
-            <span class="case-metric-num green">3.3М₽</span>
+            <span class="case-metric-num green">2.2М₽</span>
             <span class="case-metric-lbl">выручка</span>
           </div>
         </div>
-        <div class="case-quote">Продаю сам и ранее не пользовался платной рекламой. Спасибо ребятам, за экономию денег и времени.</div>
+        <div class="case-quote">Раньше мы тратили 40% времени на отсев. Теперь каждый звонок — это реальный потенциальный клиент с бюджетом.</div>
       </div>
 
       <div class="case-card">
-        <div class="case-tag">B2С продажи</div>
-        <div class="case-title">Столы реки</div>
+        <div class="case-tag">B2B продажи</div>
+        <div class="case-title">Поставщик оборудования — промышленный сектор</div>
         <div class="case-metrics">
           <div class="case-metric">
             <span class="case-metric-num">30</span>
             <span class="case-metric-lbl">заявок</span>
           </div>
           <div class="case-metric">
-            <span class="case-metric-num green">8</span>
+            <span class="case-metric-num green">7</span>
             <span class="case-metric-lbl">сделок</span>
           </div>
           <div class="case-metric">
@@ -1140,7 +1081,7 @@ footer {
             <span class="case-metric-lbl">выручка</span>
           </div>
         </div>
-        <div class="case-quote">До конца не верила, что с моим специфическим продуктом возможно получать целевые заявки без сайта и платной рекламы.</div>
+        <div class="case-quote">Средний чек у нас высокий, поэтому качество заявки критично. КСК дал именно то, что нужно — клиентов с реальным бюджетом.</div>
       </div>
 
     </div>
@@ -1253,7 +1194,7 @@ function toggleTrack(id) {
       <div class="step">
         <div class="step-num">1</div>
         <div class="step-title">Бюджет</div>
-        <p class="step-desc">Клиент готов потратить не менее суммы утверждённой с вами. Всё, что выше — остаётся вам.</p>
+        <p class="step-desc">Клиент готов потратить от 50 000 до 200 000₽. Всё, что выше — остаётся вам.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
@@ -1284,7 +1225,7 @@ function toggleTrack(id) {
   <div class="max-w">
     <div class="two-col">
       <div style="display:flex;flex-direction:column;gap:12px;">
-        <div class="crit-card"><div class="crit-num">1</div><div><div class="crit-name">Бюджет</div><p class="crit-text">Клиент готов потратить <strong>от 50 000</strong>. Ограничиваем только по минимуму — всё выше остаётся вам.</p></div></div>
+        <div class="crit-card"><div class="crit-num">1</div><div><div class="crit-name">Бюджет</div><p class="crit-text">Клиент готов потратить <strong>от 50 000 до 200 000₽</strong>. Ограничиваем только по минимуму — всё выше остаётся вам.</p></div></div>
         <div class="crit-card"><div class="crit-num">2</div><div><div class="crit-name">Сроки</div><p class="crit-text">Клиент <strong>готов заключить сделку</strong> в ближайшее время, не откладывает решение на неопределённый срок.</p></div></div>
         <div class="crit-card"><div class="crit-num">3</div><div><div class="crit-name">Коммуникация</div><p class="crit-text">Клиент <strong>готов пообщаться</strong> с вашим представителем, открыт к диалогу и обсуждению деталей.</p></div></div>
         <div class="crit-card"><div class="crit-num">4</div><div><div class="crit-name">Формат оплаты</div><p class="crit-text">У клиента <strong>подходящие условия</strong> — он готов работать по вашим финансовым условиям.</p></div></div>
@@ -1308,66 +1249,14 @@ function toggleTrack(id) {
 </section>
 
 <!-- FINANCE -->
-<section class="section" id="finance">
-  <div class="max-w">
-    <div class="sec-label">Финансовая выгода</div>
-    <h2 class="sec-title">От 150 000₽ к 6 000 000₽</h2>
-    <p class="sec-sub">Математика, которая работает на ваш рост</p>
-    <div class="two-col">
-      <div>
-        <div class="fin-invest">
-          <div class="fin-big-lbl">Ваши инвестиции</div>
-          <div class="fin-big-num">150 000₽</div>
-          <div class="fin-arrow-down">↓</div>
-          <div class="fin-big-lbl">Вы получаете</div>
-          <div class="fin-big-num blue">30 заявок</div>
-          <div class="fin-big-sub">по 5 000₽ каждая</div>
-          <div class="fin-triplet">
-            <div class="ft-item"><div class="ft-lbl">Средний чек</div><div class="ft-val">200 000₽</div></div>
-            <div class="ft-item"><div class="ft-lbl">Количество</div><div class="ft-val">30 шт.</div></div>
-            <div class="ft-total"><div class="ft-lbl">Общий потенциал</div><div class="ft-val">6 000 000₽ +</div></div>
-          </div>
-        </div>
-      </div>
-      <div class="roi-card">
-        <div>
-          <div class="roi-h">Окупаемость более 1000%</div>
-          <div class="roi-bar-item">
-            <div class="roi-bar-label"><span>Инвестиции</span><span>150 000₽</span></div>
-            <div class="roi-track"><div class="roi-fill r"></div></div>
-          </div>
-          <div class="roi-bar-item">
-            <div class="roi-bar-label"><span>Потенциал продаж</span><span>6 000 000₽</span></div>
-            <div class="roi-track"><div class="roi-fill g"></div></div>
-          </div>
-        </div>
-        <div class="roi-result">
-          <div>
-            <div class="roi-res-lbl">Окупаемость</div>
-            <div class="roi-res-sub">при конверсии всего 25%</div>
-          </div>
-          <div class="roi-res-val">3900%</div>
-        </div>
-        <div>
-          <div class="roi-h" style="margin-bottom:12px;">Почему это выгодно?</div>
-          <ul class="why-list">
-            <li class="why-item"><div class="why-chk">✓</div> Не нужны сайт и соц сети</li>
-            <li class="why-item"><div class="why-chk">✓</div> Без зарплаты сотурднику на обработку заявок</li>
-            <li class="why-item"><div class="why-chk">✓</div> Платите только за конкретный результат</li>
-            <li class="why-item"><div class="why-chk">✓</div> Прогнозируемая и прозрачная окупаемость</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- BENEFITS -->
 <section class="ben-strip alt" style="background:#fff;">
   <div class="ben-inner">
     <div>
       <div class="sec-label">Преимущества</div>
-      <h2 class="sec-title">Почему КСК выгоднее</h2>
+      <h2 class="sec-title">Почему КСК выгоднее, чем делать самому</h2>
       <div class="ben-list" style="margin-top:32px;">
         <div class="ben-item">
           <div class="ben-icon">🕐</div>
@@ -1375,7 +1264,7 @@ function toggleTrack(id) {
         </div>
         <div class="ben-item">
           <div class="ben-icon">🚫</div>
-          <div><h4>Никакого классического маркетинга</h4><p>Экономия от 500 000₽/мес на рекламу, SMM, SEO и контент-маркетинг.</p></div>
+          <div><h4>Никакого маркетинга</h4><p>Экономия от 500 000₽/мес на рекламу, SMM, SEO и контент-маркетинг.</p></div>
         </div>
         <div class="ben-item">
           <div class="ben-icon">📵</div>
@@ -1389,12 +1278,12 @@ function toggleTrack(id) {
     </div>
     <div>
       <div class="big-stat-card">
-        <div class="bsc-big"><span>%</span></div>
+        <div class="bsc-big">247<span>%</span></div>
         <div class="bsc-lbl">средний рост конверсии лидов</div>
         <div class="bsc-grid">
           <div class="bsc-item"><div class="bsc-val">-60%</div><div class="bsc-sub">стоимость привлечения</div></div>
           <div class="bsc-item"><div class="bsc-val">×3.2</div><div class="bsc-sub">скорость закрытия сделок</div></div>
-          <div class="bsc-item"><div class="bsc-val">90%</div><div class="bsc-sub">качество заявок</div></div>
+          <div class="bsc-item"><div class="bsc-val">98%</div><div class="bsc-sub">качество заявок</div></div>
           <div class="bsc-item"><div class="bsc-val">~2 мес</div><div class="bsc-sub">средний срок выполнения</div></div>
         </div>
       </div>
@@ -1411,7 +1300,7 @@ function toggleTrack(id) {
     <div class="whom-grid">
       <div class="whom-card">
         <div class="whom-icon">🏢</div>
-        <div><div class="whom-name">Высокий средний чек</div><p class="whom-text">Компании со средним чеком <strong>от 50 000₽</strong>. Производители мебели, строительные компании, автосалоны, B2С И B2B-услуги.</p></div>
+        <div><div class="whom-name">Высокий средний чек</div><p class="whom-text">Компании со средним чеком <strong>от 50 000₽</strong>. Производители мебели, строительные компании, автосалоны, B2B-услуги.</p></div>
       </div>
       <div class="whom-card">
         <div class="whom-icon">💼</div>
@@ -1488,8 +1377,8 @@ function toggleTrack(id) {
         <div class="calc-row"><span class="calc-k">Стандартный средний чек</span><span class="calc-v">200 000₽</span></div>
         <div class="calc-row"><span class="calc-k">Стоимость заявки</span><span class="calc-v">5 000₽</span></div>
         <div style="height:1px;background:var(--border);margin:8px 0;"></div>
-        <div class="calc-row"><span class="calc-k">Чек до 200 000₽</span><span class="calc-v">от 5 000₽</span></div>
-        <div class="calc-row"><span class="calc-k">Чек от 200 000₽</span><span class="calc-v amber">индивидуально</span></div>
+        <div class="calc-row"><span class="calc-k">Чек 50 000₽ — 200 000₽</span><span class="calc-v">от 5 000₽</span></div>
+        <div class="calc-row"><span class="calc-k">Чек 200 000₽+</span><span class="calc-v amber">индивидуально</span></div>
         <a href="https://t.me/tprofitK" target="_blank" class="calc-cta-btn" style="text-decoration:none;">Связаться с нами для расчёта</a>
       </div>
     </div>
@@ -1539,14 +1428,14 @@ function toggleTrack(id) {
   <div class="cta-inner">
     <div class="cta-tag">Начните сегодня</div>
     <h2 class="cta-h">Получайте квалифицированных клиентов уже сегодня</h2>
-    <p class="cta-p">Оставьте заявку и узнайте, сколько клиентов мы можем привлечь именно для вашего бизнеса.</p>
+    <p class="cta-p">Оставьте заявку и узнайте, сколько клиентов мы можем привлечь именно для вашего бизнеса. 14 дней — без рисков.</p>
     <div class="cta-nums">
       <div class="cta-box"><div class="val w">150 000₽</div><div class="lbl">Ваши инвестиции</div></div>
       <div class="cta-arrow">→</div>
       <div class="cta-box"><div class="val g">6 000 000₽</div><div class="lbl">Потенциал продаж</div></div>
     </div>
     <div class="roi-banner">
-      Окупаемость 1000%+ — это не обещание, это математика
+      ROI 1000%+ — это не обещание, это математика
       <span>30 квалифицированных заявок · Записи разговоров · Интеграция с CRM · Гарантия качества</span>
     </div>
     <div class="cta-btns">
@@ -1620,7 +1509,7 @@ function toggleTrack(id) {
   </div>
   <a href="https://t.me/tprofitK" target="_blank" class="tg-btn" title="Написать в Telegram">
     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 2C6.477226.477212s4.477 10 10 10 10-4.4771010S17.5232122zm4.93 6.686l-1.686 7.937c-.125.556-.453.692-.918.43l-2.54-1.873-1.226 1.18c-.135.135-.25.25-.512.25l.183-2.587 4.714-4.258c.205-.183-.045-.284-.317-.101L8.23 14.617l-2.5-.781c-.543-.17-.554-.543.113-.803l9.73-3.75c.453-.163.85.112.357.403z" fill="white"/>
+
     </svg>
   </a>
 </div>
